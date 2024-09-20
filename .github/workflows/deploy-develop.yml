@@ -19,13 +19,13 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y jq
-        echo "SERVICE_NAME=$(jq -r .service.name develop/config.json)" >> $GITHUB_ENV
-        echo "REPLICAS=$(jq -r .service.replicas develop/config.json)" >> $GITHUB_ENV
-        echo "RESTART_CONDITION=$(jq -r .service.restart_condition develop/config.json)" >> $GITHUB_ENV
-        echo "RESTART_DELAY=$(jq -r .service.restart_delay develop/config.json)" >> $GITHUB_ENV
-        echo "RESTART_MAX_ATTEMPTS=$(jq -r .service.restart_max_attempts develop/config.json)" >> $GITHUB_ENV
-        echo "IMAGE=$(jq -r .service.image develop/config.json)" >> $GITHUB_ENV
-        echo "PORT=$(jq -r .service.port develop/config.json)" >> $GITHUB_ENV
+        echo "SERVICE_NAME=$(jq -r .service.name configs/develop.json)" >> $GITHUB_ENV
+        echo "REPLICAS=$(jq -r .service.replicas configs/develop.json)" >> $GITHUB_ENV
+        echo "RESTART_CONDITION=$(jq -r .service.restart_condition configs/develop.json)" >> $GITHUB_ENV
+        echo "RESTART_DELAY=$(jq -r .service.restart_delay configs/develop.json)" >> $GITHUB_ENV
+        echo "RESTART_MAX_ATTEMPTS=$(jq -r .service.restart_max_attempts configs/develop.json)" >> $GITHUB_ENV
+        echo "IMAGE=$(jq -r .service.image configs/develop.json)" >> $GITHUB_ENV
+        echo "PORT=$(jq -r .service.port configs/develop.json)" >> $GITHUB_ENV
 
         # Criar tag personalizada baseada na hash do commit e data
         IMAGE_TAG=$(echo "${{ github.sha }}" | head -c7)
