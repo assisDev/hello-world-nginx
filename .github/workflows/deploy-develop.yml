@@ -49,8 +49,6 @@ jobs:
         echo "REPLICAS=$REPLICAS" >> $GITHUB_ENV
         echo "CPU_LIMIT=$CPU_LIMIT" >> $GITHUB_ENV
         echo "MEMORY_LIMIT=$MEMORY_LIMIT" >> $GITHUB_ENV
-        echo "PARALLELISM=$PARALLELISM" >> $GITHUB_ENV
-        echo "DELAY=$DELAY" >> $GITHUB_ENV
 
     - name: Log in to Docker Registry
       uses: docker/login-action@v2
