@@ -24,14 +24,16 @@ jobs:
         SERVICE_NAME=$(jq -r .service.name configs/develop.json)
         PUBLISHED_PORT=$(jq -r .service.published_port configs/develop.json)
         TARGET_PORT=$(jq -r .service.target_port configs/develop.json)
+        REPLICAS=$(jq -r .service.replicas configs/develop.json)
     
         # Verifica se as variáveis estão definidas corretamente
         echo "SERVICE_NAME: $SERVICE_NAME"
         echo "PUBLISHED_PORT: $PUBLISHED_PORT"
         echo "TARGET_PORT: $TARGET_PORT"
+        echo "REPLICAS: $REPLICAS"
     
         # Se alguma variável estiver vazia, falha imediatamente
-        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" ]]; then
+        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" ]]; then
           echo "Erro: Uma ou mais variáveis estão vazias."
           exit 1
         fi
@@ -40,6 +42,7 @@ jobs:
         echo "SERVICE_NAME=$SERVICE_NAME" >> $GITHUB_ENV
         echo "PUBLISHED_PORT=$PUBLISHED_PORT" >> $GITHUB_ENV
         echo "TARGET_PORT=$TARGET_PORT" >> $GITHUB_ENV
+        echo "REPLICAS=$REPLICAS" >> $GITHUB_ENV
 
     - name: Log in to Docker Registry
       uses: docker/login-action@v2
@@ -65,17 +68,17 @@ jobs:
         script: |
           # Verifica se o serviço existe
           if docker service ls | grep -q ${{ env.SERVICE_NAME }}; then
-            echo "Service exists, updating image and ports..."
+            echo "Service exists, updating image, ports, and replicas..."
     
-            if [[ -n "${{ env.PUBLISHED_PORT }}" && -n "${{ env.TARGET_PORT }}" ]]; then
+            if [[ -n "${{ env.PUBLISHED_PORT }}" && -n "${{ env.TARGET_PORT }}" && -n "${{ env.REPLICAS }}" ]]; then
               docker service update \
                 --image ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest \
                 --publish-rm published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
                 --publish-add published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
+                --replicas ${{ env.REPLICAS }} \
                 ${{ env.SERVICE_NAME }}
             else
-              echo "Erro: Portas não definidas."
+              echo "Erro: Portas ou réplicas não definidas."
               exit 1
             fi
           fi
-      

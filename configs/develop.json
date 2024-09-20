@@ -1,7 +1,8 @@
 {
   "service": {
-      "name": "hello-world-nginx",
-      "published_port": 8080,
-      "target_port": 80
+    "name": "hello-world-nginx",
+    "published_port": 8080,
+    "target_port": 80,
+    "replicas": 3
   }
 }
