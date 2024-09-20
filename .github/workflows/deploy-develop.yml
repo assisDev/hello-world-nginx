@@ -20,14 +20,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y jq
         echo "SERVICE_NAME=$(jq -r .service.name configs/develop.json)" >> $GITHUB_ENV
-        echo "PUBLISHED_PORT=$(jq -r .service.publishedPort configs/develop.json)" >> $GITHUB_ENV
-        echo "TARGET_PORT=$(jq -r .service.targetPort configs/develop.json)" >> $GITHUB_ENV
-
-        # Verifica se as variáveis de porta estão vazias
-        if [[ -z "${PUBLISHED_PORT}" || -z "${TARGET_PORT}" ]]; then
-          echo "Port configuration is missing in configs/develop.json"
-          exit 1
-        fi
+        echo "PUBLISHED_PORT=$(jq -r .service.published_port configs/develop.json)" >> $GITHUB_ENV
+        echo "TARGET_PORT=$(jq -r .service.target_port configs/develop.json)" >> $GITHUB_ENV
 
         # Criar tag personalizada baseada na hash do commit e data
         IMAGE_TAG=$(echo "${{ github.sha }}" | head -c7)
