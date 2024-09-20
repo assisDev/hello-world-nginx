@@ -1,0 +1,35 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main  # Substitua "main" pela branch que você quer monitorar
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Copy files to VPS
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: 22  # Substitua pela porta SSH se não for a 22
+        source: "."  # O diretório atual, ou ajuste conforme necessário
+        target: "/caminho/para/destino/no/vps"  # Altere conforme necessário
+
+    - name: Restart application
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: 22  # A porta SSH (ajuste se for diferente)
+        script: |
+          cd /caminho/para/destino/no/vps  # Ajuste para o diretório correto
+          docker-compose down
+          docker-compose up -d
