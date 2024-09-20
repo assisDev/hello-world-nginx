@@ -60,6 +60,5 @@ jobs:
                                 ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest || \
           # Atualiza o serviço se ele já existir
           docker service update \
-                                --publish-rm published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
                                 --publish-add published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
                                 ${{ env.SERVICE_NAME }}
