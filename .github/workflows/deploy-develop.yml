@@ -25,19 +25,15 @@ jobs:
         PUBLISHED_PORT=$(jq -r .service.published_port configs/develop.json)
         TARGET_PORT=$(jq -r .service.target_port configs/develop.json)
         REPLICAS=$(jq -r .service.replicas configs/develop.json)
-        CPU_LIMIT=$(jq -r .service.cpu_limit configs/develop.json)
-        MEMORY_LIMIT=$(jq -r .service.memory_limit configs/develop.json)
 
         # Verifica se as variáveis estão definidas corretamente
         echo "SERVICE_NAME: $SERVICE_NAME"
         echo "PUBLISHED_PORT: $PUBLISHED_PORT"
         echo "TARGET_PORT: $TARGET_PORT"
         echo "REPLICAS: $REPLICAS"
-        echo "CPU_LIMIT: $CPU_LIMIT"
-        echo "MEMORY_LIMIT: $MEMORY_LIMIT"
 
         # Se alguma variável estiver vazia, falha imediatamente
-        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" || -z "$CPU_LIMIT" || -z "$MEMORY_LIMIT" ]]; then
+        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" ]]; then
           echo "Erro: Uma ou mais variáveis estão vazias."
           exit 1
         fi
@@ -47,8 +43,6 @@ jobs:
         echo "PUBLISHED_PORT=$PUBLISHED_PORT" >> $GITHUB_ENV
         echo "TARGET_PORT=$TARGET_PORT" >> $GITHUB_ENV
         echo "REPLICAS=$REPLICAS" >> $GITHUB_ENV
-        echo "CPU_LIMIT=$CPU_LIMIT" >> $GITHUB_ENV
-        echo "MEMORY_LIMIT=$MEMORY_LIMIT" >> $GITHUB_ENV
 
     - name: Log in to Docker Registry
       uses: docker/login-action@v2
@@ -82,8 +76,6 @@ jobs:
                 --publish-rm published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
                 --publish-add published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
                 --replicas ${{ env.REPLICAS }} \
-                --limit-cpu ${{ env.CPU_LIMIT }} \
-                --limit-memory ${{ env.MEMORY_LIMIT }} \
                 ${{ env.SERVICE_NAME }}
             else
               echo "Erro: Portas, réplicas, ou outros parâmetros não definidos."
