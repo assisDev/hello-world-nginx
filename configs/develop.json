@@ -1,13 +1,12 @@
 {
-    "service": {
-      "name": "hello-world-nginx",
-      "replicas": 3,
-      "restart_condition": "any",
-      "restart_delay": "5s",
-      "restart_max_attempts": 3,
-      "image": "hello-world-nginx:latest",
-      "published_port": 8080,
-      "target_port": 80
-    }
+  "service": {
+    "name": "hello-world-nginx",
+    "replicas": 3,
+    "restart_condition": "any",
+    "restart_delay": "5s",
+    "restart_max_attempts": 3,
+    "image": "hello-world-nginx:latest",
+    "published_port": 8080,
+    "target_port": 80
+  }
 }
-  
