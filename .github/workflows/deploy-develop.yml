@@ -67,12 +67,8 @@ jobs:
                                 --publish ${{ env.PORT }} \
                                 ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest || \
           # Atualiza o serviço se ele já existir
-          docker service update \
-                                --image ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest \
+          docker service update --image ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest \
                                 --replicas ${{ env.REPLICAS }} \
-                                --restart-condition ${{ env.RESTART_CONDITION }} \
-                                --restart-delay ${{ env.RESTART_DELAY }} \
-                                --restart-max-attempts ${{ env.RESTART_MAX_ATTEMPTS }} \
                                 --publish-rm ${{ env.PORT }} \
                                 --publish-add ${{ env.PORT }} \
                                 ${{ env.SERVICE_NAME }}
