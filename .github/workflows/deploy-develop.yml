@@ -19,17 +19,23 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y jq
-
+    
         # Captura as variáveis do arquivo JSON
         SERVICE_NAME=$(jq -r .service.name configs/develop.json)
         PUBLISHED_PORT=$(jq -r .service.published_port configs/develop.json)
         TARGET_PORT=$(jq -r .service.target_port configs/develop.json)
-
+    
         # Verifica se as variáveis estão definidas corretamente
         echo "SERVICE_NAME: $SERVICE_NAME"
         echo "PUBLISHED_PORT: $PUBLISHED_PORT"
         echo "TARGET_PORT: $TARGET_PORT"
-
+    
+        # Se alguma variável estiver vazia, falha imediatamente
+        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" ]]; then
+          echo "Erro: Uma ou mais variáveis estão vazias."
+          exit 1
+        fi
+    
         # Exporta as variáveis para o ambiente do GitHub Actions
         echo "SERVICE_NAME=$SERVICE_NAME" >> $GITHUB_ENV
         echo "PUBLISHED_PORT=$PUBLISHED_PORT" >> $GITHUB_ENV
@@ -50,10 +56,6 @@ jobs:
         file: ./Dockerfile
         context: .
 
-  deploy:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-    steps:
     - name: Deploy to Docker Swarm
       uses: appleboy/ssh-action@master
       with:
@@ -61,9 +63,19 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          echo "Service exists, updating image and ports..."
-          docker service update \
-            --image ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest \
-            --publish-rm published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
-            --publish-add published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
-            ${{ env.SERVICE_NAME }}
+          # Verifica se o serviço existe
+          if docker service ls | grep -q ${{ env.SERVICE_NAME }}; then
+            echo "Service exists, updating image and ports..."
+    
+            if [[ -n "${{ env.PUBLISHED_PORT }}" && -n "${{ env.TARGET_PORT }}" ]]; then
+              docker service update \
+                --image ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest \
+                --publish-rm published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
+                --publish-add published=${{ env.PUBLISHED_PORT }},target=${{ env.TARGET_PORT }} \
+                ${{ env.SERVICE_NAME }}
+            else
+              echo "Erro: Portas não definidas."
+              exit 1
+            fi
+          fi
+      
