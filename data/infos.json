@@ -1,0 +1,202 @@
+{
+    "0 meses": {
+        "prona": "Recém-nascidos podem virar a cabeça para os lados mas ainda com pouco controle cervical.",
+        "supina": "Mantêm as mãos fechadas e reagem a sons com reflexos de sobressalto.",
+        "lateral": "Podem assumir uma postura em 'curva' com os membros flexionados, posição fetal.",
+        "descrição": "Neste estágio inicial, o bebê desenvolve reflexos vitais e começa a responder ao ambiente.",
+        "ponto_de_atenção": "Verificar se o bebê consegue respirar corretamente de bruços e reage a estímulos sonoros como uma voz.",
+        "video_link": "https://www.youtube.com/embed/QCYBh1dnd2c"
+    },
+    "1 meses": {
+        "prona": "Levanta brevemente a cabeça e começa a desenvolver controle cervical.",
+        "supina": "Observa o rosto dos pais e segue objetos com os olhos.",
+        "lateral": "Menos curvatura fetal, começando a esticar braços e pernas.",
+        "descrição": "O bebê começa a interagir mais com o ambiente, sendo capaz de reconhecer rostos e seguir objetos em movimento.",
+        "ponto_de_atenção": "Certifique-se de que o bebê tem tempo suficiente deitado de barriga para baixo para promover o fortalecimento dos músculos do pescoço e ombros.",
+        "video_link": "https://www.youtube.com/embed/Ep4SmkmvTwE"
+    },
+    "2 meses": {
+        "prona": "Mantém a cabeça elevada em um ângulo de 45 graus quando deitado de barriga para baixo, começando a usar os braços para suporte.",
+        "supina": "Sorri em resposta a estímulos e interações; movimenta-se mais ativamente.",
+        "lateral": "Mais confortável com movimentos laterais, começando a rolar intencionalmente para os lados.",
+        "descrição": "O bebê desenvolve a capacidade de sorrir intencionalmente e mostra mais controle sobre os movimentos do corpo.",
+        "ponto_de_atenção": "Observe a capacidade do bebê de acompanhar objetos em movimento, o que é crucial para o desenvolvimento da coordenação olho-mão.",
+        "video_link": "https://www.youtube.com/embed/hWSlu3WDdvM"
+    },
+    "3 meses": {
+        "prona": "Eleva o peito com apoio dos braços, melhor controle da cabeça.",
+        "supina": "Bate nas coisas penduradas acima, como móbiles; segue objetos em movimento.",
+        "lateral": "Rola da posição lateral para supina com mais facilidade.",
+        "descrição": "O bebê começa a rir e pode reconhecer rostos familiares, mostrando avanços significativos no desenvolvimento social e motor.",
+        "ponto_de_atenção": "Verifique se o bebê consegue levantar o peito usando os braços como suporte, um importante indicativo de força muscular adequada.",
+        "video_link": "https://www.youtube.com/embed/bVbtH1Zp4gA"
+    },
+    "4 meses": {
+        "prona": "Pode empurrar para cima com os braços estendidos, rola de prona para supina.",
+        "supina": "Ri alto e expressa excitação com movimentos das pernas e braços.",
+        "lateral": "Rola de supina para lateral; tenta alcançar objetos.",
+        "descrição": "Aos 4 meses, muitos bebês desenvolvem a habilidade de rolar, marcando um grande avanço na mobilidade e na exploração do ambiente.",
+        "ponto_de_atenção": "Fique atento à reação do bebê a novos estímulos e sua habilidade de rolar, ambos indicativos de desenvolvimento neuromotor saudável.",
+        "video_link": "https://www.youtube.com/embed/T3ANpErEDp0"
+    },
+    "5 meses": {
+        "prona": "Rola de prona para supina e vice-versa; controla melhor a cabeça e o tronco.",
+        "supina": "Presta atenção a próprias mãos e brinca com os pés.",
+        "lateral": "Mantém-se em posição lateral por períodos mais longos; explora objetos com as mãos.",
+        "descrição": "Com 5 meses, os bebês aumentam sua exploração do ambiente, usando as mãos para aprender sobre o mundo ao seu redor.",
+        "ponto_de_atenção": "Observe a coordenação mão-olho, crucial para o desenvolvimento de habilidades motoras finas.",
+        "video_link": "https://www.youtube.com/embed/OLjpI0d67RY"
+    },
+    "6 meses": {
+        "prona": "Senta-se com apoio; movimenta-se para alcançar brinquedos.",
+        "supina": "Volta-se para sons e vozes; balbucia sons como 'ba-ba'.",
+        "lateral": "Rola em várias direções; interage mais com brinquedos e pessoas.",
+        "descrição": "Aos 6 meses, os bebês começam a balbuciar sons e podem se sentar com apoio, mostrando melhorias na comunicação e no controle corporal.",
+        "ponto_de_atenção": "A habilidade de sentar-se com apoio é um marco importante que indica bom desenvolvimento muscular e de equilíbrio.",
+        "video_link": "https://www.youtube.com/embed/t91ajwuDqKU"
+    },
+    "7 meses": {
+        "prona": "Rasteja usando a barriga ou começa a engatinhar.",
+        "supina": "Joga objetos e brinca de 'cadê-achou' com as mãos.",
+        "lateral": "Pode se sentar brevemente sem apoio, usando as mãos para equilibrar.",
+        "descrição": "Aos 7 meses, os bebês geralmente começam a rastejar, o que aumenta sua habilidade de explorar o ambiente. Também podem começar a se sentar sem apoio.",
+        "ponto_de_atenção": "Certifique-se de que o ambiente é seguro para exploração, pois os bebês estão mais móveis e podem alcançar mais objetos.",
+        "video_link": "https://www.youtube.com/embed/fs_EIxHi6Yw"
+    },
+    "8 meses": {
+        "prona": "Fica de quatro e balança para frente e para trás, preparando-se para engatinhar.",
+        "supina": "Entende o conceito de 'não'; reage a expressões faciais.",
+        "lateral": "Senta-se estável sem apoio, começando a alcançar objetos enquanto mantém equilíbrio.",
+        "descrição": "O bebê começa a entender comandos simples e expressa mais claramente suas emoções e desejos.",
+        "ponto_de_atenção": "Preste atenção ao desenvolvimento da linguagem e compreensão de comandos básicos, fundamentais para a comunicação efetiva.",
+        "video_link": "https://www.youtube.com/embed/NuI5hCP--BY"
+    },
+    "9 meses": {
+        "prona": "Engatinha eficientemente; puxa-se para ficar de pé usando móveis.",
+        "supina": "Responde verbalmente a comandos simples; mais expressivo com rosto e mãos.",
+        "lateral": "Senta-se firmemente; começa a se deslocar lateralmente apoiando-se em móveis.",
+        "descrição": "Aos 9 meses, os bebês geralmente começam a se puxar para ficar de pé e podem começar a engatinhar de forma mais eficiente.",
+        "ponto_de_atenção": "As habilidades de engatinhar e se levantar são marcos importantes. Certifique-se de que o ambiente é seguro para evitar quedas e colisões.",
+        "video_link": "https://www.youtube.com/embed/yDMDtWx3t50"
+    },
+    "10 meses": {
+        "prona": "Levanta-se e anda segurando em móveis; pode ficar de pé brevemente sem apoio.",
+        "supina": "Balbucia palavras mais complexas; reage a músicas com movimentos.",
+        "lateral": "Cruza pernas quando sentado; tenta levantar-se usando as mãos.",
+        "descrição": "Os bebês começam a demonstrar a capacidade de ficar de pé sem apoio e de balbuciar combinações de sons que se assemelham a palavras.",
+        "ponto_de_atenção": "Observe o desenvolvimento da fala e encoraje a comunicação verbal através de conversas simples e leitura.",
+        "video_link": "https://www.youtube.com/embed/EzutW35C8jI"
+    },
+    "11 meses": {
+        "prona": "Anda com apoio; explora o ambiente de forma mais ativa.",
+        "supina": "Imita sons e gestos; gosta de jogos interativos como 'palmas'.",
+        "lateral": "Senta-se para brincar com brinquedos; mais controle quando se levanta.",
+        "descrição": "Aos 11 meses, muitos bebês estão quase caminhando e melhoram na imitação de sons e gestos, preparando-se para os primeiros passos e palavras.",
+        "ponto_de_atenção": "O momento é ideal para incentivar a caminhada com segurança e estimular a fala através de jogos e canções.",
+        "video_link": "https://www.youtube.com/embed/gWRJi1tXxMs"
+    },
+    "12 meses": {
+        "prona": "Pode caminhar sem apoio ou dar os primeiros passos sozinho.",
+        "supina": "Fala palavras simples como 'mamãe' e 'papai'; segue instruções básicas.",
+        "lateral": "Senta-se cruzando as pernas; fica de pé e se senta sem ajuda.",
+        "descrição": "O primeiro aniversário marca um momento significativo onde muitos bebês começam a andar e falar. É uma fase de grande desenvolvimento na independência e habilidades motoras.",
+        "ponto_de_atenção": "Monitoramento do desenvolvimento da marcha e da fala é crucial. Apoie o bebê com atividades que promovam essas habilidades.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0?list=PLS3Jn9Yb-1weXQUrIdQfpqNg-4jn1bVx2"
+    },
+    "13 meses": {
+        "prona": "Corre pequenas distâncias e se agacha para pegar objetos.",
+        "supina": "Comunica-se com gestos e algumas palavras juntas, como 'quer leite'.",
+        "lateral": "Sobe em móveis baixos; brinca sentado com maior estabilidade.",
+        "descrição": "Nesta fase, a criança aprimora suas habilidades de corrida e comunicação. A exploração do ambiente se torna mais complexa.",
+        "ponto_de_atenção": "Fique atento ao ambiente para garantir segurança, pois a mobilidade aumentada traz novos riscos de acidentes.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "14 meses": {
+        "prona": "Caminha para trás e manobra em torno de obstáculos com facilidade.",
+        "supina": "Pode começar a usar colheres ou garfos sob supervisão.",
+        "lateral": "Joga e recupera brinquedos, demonstrando melhor coordenação.",
+        "descrição": "O bebê agora usa utensílios com alguma habilidade e explora novas maneiras de mover-se e interagir com o ambiente.",
+        "ponto_de_atenção": "Supervisione as refeições para incentivar habilidades de autoalimentação enquanto minimiza o risco de engasgos.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "15 meses": {
+        "prona": "Corre com mais confiança, pode subir degraus com ajuda.",
+        "supina": "Usa várias palavras e reconhece nomes de objetos familiares.",
+        "lateral": "Participa em jogos simples como empilhar blocos.",
+        "descrição": "Aos 15 meses, a criança começa a usar palavras com mais frequência e mostra habilidades motoras mais desenvolvidas em corrida e escalada.",
+        "ponto_de_atenção": "Encoraje o uso de palavras durante as brincadeiras e esteja alerta para prevenir quedas, especialmente em escadas.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "16 meses": {
+        "prona": "Manipula brinquedos com partes móveis e explora mais intensamente.",
+        "supina": "Expressa desejos e necessidades com palavras e gestos combinados.",
+        "lateral": "Pode subir em sofás e cadeiras baixas sem ajuda.",
+        "descrição": "Este é um período de grande curiosidade e desejo de explorar. A criança usa gestos e palavras para se comunicar de forma mais eficaz.",
+        "ponto_de_atenção": "Garanta a segurança da criança restringindo o acesso a áreas que possam apresentar riscos, como cozinhas ou escadas sem proteção.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "17 meses": {
+        "prona": "Participa ativamente de jogos de faz-de-conta, como fingir falar ao telefone.",
+        "supina": "Mostra preferência por certos livros ou brinquedos, pedindo-os pelo nome.",
+        "lateral": "Desenvolve um melhor equilíbrio ao sentar e ao se levantar.",
+        "descrição": "A criança mostra preferências claras por brinquedos e atividades, indicando um desenvolvimento cognitivo e emocional.",
+        "ponto_de_atenção": "Estimule atividades de faz-de-conta para desenvolver habilidades cognitivas e sociais.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "18 meses": {
+        "prona": "Pode correr rapidamente e iniciar jogos de perseguição.",
+        "supina": "Aumenta o vocabulário rapidamente, usando duas ou três palavras juntas.",
+        "lateral": "Gosta de brincar ao lado de outras crianças, embora ainda não interaja completamente.",
+        "descrição": "O vocabulário da criança cresce significativamente, e sua capacidade de correr e brincar com outros mostra avanços na socialização.",
+        "ponto_de_atenção": "Incentive a interação com outras crianças para fomentar habilidades sociais e monitore a segurança durante o jogo ativo.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "19 meses": {
+        "prona": "Pode chutar uma bola pequena enquanto anda.",
+        "supina": "Começa a formar frases mais complexas, como 'Quero água'.",
+        "lateral": "Demonstra habilidade em escalar móveis de forma segura.",
+        "descrição": "Aos 19 meses, a criança aprimora habilidades motoras complexas como chutar enquanto anda, e sua linguagem se torna mais elaborada.",
+        "ponto_de_atenção": "Continue a estimular a fala através de conversas e leitura, e certifique-se de que os ambientes são seguros para a escalada.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "20 meses": {
+        "prona": "Corre com maior coordenação, evitando obstáculos de forma eficaz.",
+        "supina": "Utiliza garfos e colheres com melhor habilidade.",
+        "lateral": "Pode construir torres de blocos mais altas e complexas.",
+        "descrição": "Aos 20 meses, as crianças mostram maior independência ao comer e melhor coordenação em atividades que exigem habilidades motoras finas.",
+        "ponto_de_atenção": "Foque em atividades que desenvolvam habilidades motoras finas e grossas, como construção de blocos e jogos que envolvam correr e desviar.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "21 meses": {
+        "prona": "Participa em jogos de imitação mais complexos, como 'fazer de conta' que está cozinhando.",
+        "supina": "Expressa claramente desejos e sentimentos, como alegria ou frustração, através de palavras e gestos.",
+        "lateral": "Interage com outras crianças em jogos simples, mostrando habilidades sociais emergentes.",
+        "descrição": "Nesta fase, a criança começa a mostrar habilidades de jogo simbólico mais desenvolvidas, que são fundamentais para o desenvolvimento cognitivo e social.",
+        "ponto_de_atenção": "Encoraje jogos de faz-de-conta e interação social com outras crianças para promover habilidades sociais e emocionais.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "22 meses": {
+        "prona": "Gosta de atividades físicas desafiadoras, como subir pequenos escorregadores ou andar em balanços.",
+        "supina": "Pode seguir instruções mais complexas, como 'Coloque o livro na estante.'",
+        "lateral": "Mostra preferência por brinquedos específicos e pode brincar de forma mais focada e prolongada.",
+        "descrição": "Os 22 meses são marcados por um aumento na capacidade de seguir instruções e na preferência por atividades e brinquedos específicos.",
+        "ponto_de_atenção": "Ofereça desafios adequados à idade para promover habilidades motoras e cognitivas, e continue a estimular a linguagem e a compreensão.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "23 meses": {
+        "prona": "Demonstra habilidades motoras avançadas, como pular com os dois pés.",
+        "supina": "Utiliza frases completas e pode cantar canções simples.",
+        "lateral": "Participa em brincadeiras mais estruturadas com outras crianças, como jogos de fazer de conta.",
+        "descrição": "Aos 23 meses, a criança utiliza frases completas e participa ativamente em brincadeiras sociais, mostrando grandes avanços na linguagem e nas habilidades sociais.",
+        "ponto_de_atenção": "Acompanhe e participe ativamente nas brincadeiras da criança para fomentar a aprendizagem social e o desenvolvimento da linguagem.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    },
+    "24 meses": {
+        "prona": "Corre com habilidade, pode evitar obstáculos e mudar de direção rapidamente.",
+        "supina": "Fala em frases completas, faz perguntas simples como 'O que é isso?'",
+        "lateral": "Mostra interesse em brincar com outras crianças e pode participar em atividades de grupo.",
+        "descrição": "Ao completar dois anos, a criança possui habilidades de fala e motoras bem desenvolvidas, participando ativamente de jogos com outras crianças e explorando o mundo com grande curiosidade.",
+        "ponto_de_atenção": "Continue a estimular a fala e a interação social, e certifique-se de que os ambientes de brincadeira são seguros e estimulantes.",
+        "video_link": "https://www.youtube.com/embed/f3Dja2thnj0"
+    }
+}

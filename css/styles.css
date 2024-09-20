@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+}
+
+.container {
+    max-width: 100%; /* Alterado para 100% para evitar a barra de rolagem horizontal */
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+input[type="number"], button, .form-control {
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 8px #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+}
+
+#info, iframe {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attention-point {
+    color: #d9534f;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.attention-point i {
+    margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    input[type="number"], button, .form-control, .form-check-label {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    input[type="number"], button, .form-control, .form-check-label {
+        font-size: 1.1em;
+    }
+}
