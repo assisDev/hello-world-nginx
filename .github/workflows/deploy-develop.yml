@@ -69,6 +69,5 @@ jobs:
           # Atualiza o serviço se ele já existir
           docker service update --image ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest \
                                 --replicas ${{ env.REPLICAS }} \
-                                --publish-rm ${{ env.PORT }} \
                                 --publish-add ${{ env.PORT }} \
                                 ${{ env.SERVICE_NAME }}
