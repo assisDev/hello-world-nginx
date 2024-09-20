@@ -29,12 +29,12 @@ jobs:
         file: ./Dockerfile
         context: .
 
-    # - name: Deploy to Docker Swarm
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     host: ${{ secrets.SSH_HOST }}
-    #     username: ${{ secrets.SSH_USERNAME }}
-    #     key: ${{ secrets.SSH_KEY }}
-    #     script: |
-    #       docker pull yourdockerhubusername/hello-world-nginx:latest
-    #       docker stack deploy -c /path/to/docker-stack.yml hello-world
+    - name: Deploy to Docker Swarm
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          docker pull ${{secrets.DOCKER_USERNAME}}/hello-world-nginx:latest
+          docker service update --image ${{secrets.DOCKER_USERNAME}}/hello-world-nginx:latest hello-world-nginx
