@@ -26,6 +26,7 @@ jobs:
         # Criar tag personalizada baseada na hash do commit e data
         IMAGE_TAG=$(echo "${{ github.sha }}" | head -c7)
         echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV
+        echo SERVICE_NAME
 
     - name: Log in to Docker Registry
       uses: docker/login-action@v2
