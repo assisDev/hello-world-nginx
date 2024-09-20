@@ -35,8 +35,6 @@ jobs:
         echo "REPLICAS: $REPLICAS"
         echo "CPU_LIMIT: $CPU_LIMIT"
         echo "MEMORY_LIMIT: $MEMORY_LIMIT"
-        echo "PARALLELISM: $PARALLELISM"
-        echo "DELAY: $DELAY"
 
         # Se alguma variável estiver vazia, falha imediatamente
         if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" || -z "$CPU_LIMIT" || -z "$MEMORY_LIMIT" || -z "$PARALLELISM" || -z "$DELAY" ]]; then
