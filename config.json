@@ -1,0 +1,12 @@
+{
+    "service": {
+      "name": "hello-worçd-nginx",
+      "replicas": 3,
+      "restart_condition": "any",
+      "restart_delay": "5s",
+      "restart_max_attempts": 3,
+      "image": "hello-world-nginx:latest",
+      "port": "80:80"
+    }
+}
+  
