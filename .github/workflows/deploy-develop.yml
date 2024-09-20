@@ -61,7 +61,6 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          # Verifica se o serviço existe
           if docker service ls | grep -q ${{ env.SERVICE_NAME }}; then
             echo "Service exists, updating image and ports..."
             docker service update \
