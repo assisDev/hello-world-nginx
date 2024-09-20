@@ -1,8 +1,18 @@
 {
   "service": {
     "name": "hello-world-nginx",
-    "published_port": 8081,
+    "published_port": 8080,
     "target_port": 80,
-    "replicas": 1
+    "replicas": 1,
+    "cpu_limit": "0.5",
+    "memory_limit": "256M",
+    "constraint": "node.role==manager",
+    "update_delay": "10s",
+    "update_parallelism": 2,
+    "rollback_delay": "10s",
+    "restart_condition": "any",
+    "network": "my-overlay-network",
+    "log_driver": "json-file",
+    "log_opt": "max-size=10m"
   }
 }
