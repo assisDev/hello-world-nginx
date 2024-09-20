@@ -41,7 +41,7 @@ jobs:
         echo "DELAY: $DELAY"
 
         # Se alguma variável estiver vazia, falha imediatamente
-        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" || -z "$CPU_LIMIT" || -z "$MEMORY_LIMIT" || -z "$CONSTRAINTS" || -z "$PARALLELISM" || -z "$DELAY" ]]; then
+        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" || -z "$CPU_LIMIT" || -z "$MEMORY_LIMIT" || -z "$PARALLELISM" || -z "$DELAY" ]]; then
           echo "Erro: Uma ou mais variáveis estão vazias."
           exit 1
         fi
@@ -53,7 +53,6 @@ jobs:
         echo "REPLICAS=$REPLICAS" >> $GITHUB_ENV
         echo "CPU_LIMIT=$CPU_LIMIT" >> $GITHUB_ENV
         echo "MEMORY_LIMIT=$MEMORY_LIMIT" >> $GITHUB_ENV
-        echo "CONSTRAINTS=$CONSTRAINTS" >> $GITHUB_ENV
         echo "PARALLELISM=$PARALLELISM" >> $GITHUB_ENV
         echo "DELAY=$DELAY" >> $GITHUB_ENV
 
