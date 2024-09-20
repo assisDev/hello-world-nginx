@@ -37,7 +37,7 @@ jobs:
         echo "MEMORY_LIMIT: $MEMORY_LIMIT"
 
         # Se alguma variável estiver vazia, falha imediatamente
-        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" || -z "$CPU_LIMIT" || -z "$MEMORY_LIMIT" || -z "$PARALLELISM" || -z "$DELAY" ]]; then
+        if [[ -z "$SERVICE_NAME" || -z "$PUBLISHED_PORT" || -z "$TARGET_PORT" || -z "$REPLICAS" || -z "$CPU_LIMIT" || -z "$MEMORY_LIMIT"]]; then
           echo "Erro: Uma ou mais variáveis estão vazias."
           exit 1
         fi
