@@ -11,7 +11,7 @@
     "update_parallelism": 2,
     "rollback_delay": "10s",
     "restart_condition": "any",
-    "network": "my-overlay-network",
+    "network": "my-overlay",
     "log_driver": "json-file",
     "log_opt": "max-size=10m"
   }
