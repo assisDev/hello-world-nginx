@@ -1,6 +1,6 @@
 {
     "service": {
-      "name": "hello-worçd-nginx",
+      "name": "hello-world-nginx",
       "replicas": 3,
       "restart_condition": "any",
       "restart_delay": "5s",
