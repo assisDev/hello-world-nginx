@@ -46,7 +46,6 @@ jobs:
       with:
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest
-          ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:${{ env.IMAGE_TAG }}
         push: true
         file: ./Dockerfile
         context: .
