@@ -27,8 +27,6 @@ jobs:
         REPLICAS=$(jq -r .service.replicas configs/develop.json)
         CPU_LIMIT=$(jq -r .service.cpu_limit configs/develop.json)
         MEMORY_LIMIT=$(jq -r .service.memory_limit configs/develop.json)
-        PARALLELISM=$(jq -r .service.update_config.parallelism configs/develop.json)
-        DELAY=$(jq -r .service.update_config.delay configs/develop.json)
 
         # Verifica se as variáveis estão definidas corretamente
         echo "SERVICE_NAME: $SERVICE_NAME"
@@ -90,8 +88,6 @@ jobs:
                 --replicas ${{ env.REPLICAS }} \
                 --limit-cpu ${{ env.CPU_LIMIT }} \
                 --limit-memory ${{ env.MEMORY_LIMIT }} \
-                --update-parallelism ${{ env.PARALLELISM }} \
-                --update-delay ${{ env.DELAY }} \
                 ${{ env.SERVICE_NAME }}
             else
               echo "Erro: Portas, réplicas, ou outros parâmetros não definidos."

@@ -1,14 +1,10 @@
 {
   "service": {
     "name": "hello-world-nginx",
-    "published_port": 8443,
+    "published_port": 8080,
     "target_port": 80,
     "replicas": 1,
     "cpu_limit": "0.5",
-    "memory_limit": "512M",
-    "update_config": {
-      "parallelism": 2,
-      "delay": "10s"
-    }
+    "memory_limit": "512M"
   }
 }
