@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  hello-world-nginx:
+    image: hello-world-nginx:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - my-overlay
+
+networks:
+  my-overlay:
+    external: true
