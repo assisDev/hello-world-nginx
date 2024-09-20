@@ -19,18 +19,21 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y jq
-        echo "SERVICE_NAME=$(jq -r .service.name configs/develop.json)" >> $GITHUB_ENV
-        echo "PUBLISHED_PORT=$(jq -r .service.published_port configs/develop.json)" >> $GITHUB_ENV
-        echo "TARGET_PORT=$(jq -r .service.target_port configs/develop.json)" >> $GITHUB_ENV
 
-        # Criar tag personalizada baseada na hash do commit e data
-        IMAGE_TAG=$(echo "${{ github.sha }}" | head -c7)
-        echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV
-        
-        # Exibe os resultados para depuração
+        # Captura as variáveis do arquivo JSON
+        SERVICE_NAME=$(jq -r .service.name configs/develop.json)
+        PUBLISHED_PORT=$(jq -r .service.published_port configs/develop.json)
+        TARGET_PORT=$(jq -r .service.target_port configs/develop.json)
+
+        # Verifica se as variáveis estão definidas corretamente
         echo "SERVICE_NAME: $SERVICE_NAME"
         echo "PUBLISHED_PORT: $PUBLISHED_PORT"
         echo "TARGET_PORT: $TARGET_PORT"
+
+        # Exporta as variáveis para o ambiente do GitHub Actions
+        echo "SERVICE_NAME=$SERVICE_NAME" >> $GITHUB_ENV
+        echo "PUBLISHED_PORT=$PUBLISHED_PORT" >> $GITHUB_ENV
+        echo "TARGET_PORT=$TARGET_PORT" >> $GITHUB_ENV
 
     - name: Log in to Docker Registry
       uses: docker/login-action@v2
