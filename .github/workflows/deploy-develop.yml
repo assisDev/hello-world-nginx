@@ -122,21 +122,19 @@ jobs:
           else
             echo "Service does not exist, creating new service..."
 
-          docker service create \
-            --name ${{ env.SERVICE_NAME }} \
-            --publish ${{ env.PUBLISHED_PORT }}:${{ env.TARGET_PORT }} \
-            --replicas ${{ env.REPLICAS }} \
-            --limit-cpu ${{ env.CPU_LIMIT }} \
-            --limit-memory ${{ env.MEMORY_LIMIT }} \
-            --constraint ${{ env.CONSTRAINT }} \
-            --restart-condition ${{ env.RESTART_CONDITION }} \
-            --update-delay ${{ env.UPDATE_DELAY }} \
-            --update-parallelism ${{ env.UPDATE_PARALLELISM }} \
-            --rollback-delay ${{ env.ROLLBACK_DELAY }} \
-            --network ${{ env.NETWORK }} \
-            --log-driver ${{ env.LOG_DRIVER }} \
-            --log-opt ${{ env.LOG_OPT }} \
-            --mount type=bind,source=/etc/letsencrypt/live/assisdev.com.br/fullchain.pem,target=/etc/nginx/ssl/fullchain.pem,readonly \
-            --mount type=bind,source=/etc/letsencrypt/live/assisdev.com.br/privkey.pem,target=/etc/nginx/ssl/privkey.pem,readonly \
-            ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest
+            docker service create \
+              --name ${{ env.SERVICE_NAME }} \
+              --publish ${{ env.PUBLISHED_PORT }}:${{ env.TARGET_PORT }} \
+              --replicas ${{ env.REPLICAS }} \
+              --limit-cpu ${{ env.CPU_LIMIT }} \
+              --limit-memory ${{ env.MEMORY_LIMIT }} \
+              --constraint ${{ env.CONSTRAINT }} \
+              --restart-condition ${{ env.RESTART_CONDITION }} \
+              --update-delay ${{ env.UPDATE_DELAY }} \
+              --update-parallelism ${{ env.UPDATE_PARALLELISM }} \
+              --rollback-delay ${{ env.ROLLBACK_DELAY }} \
+              --network ${{ env.NETWORK }} \
+              --log-driver ${{ env.LOG_DRIVER }} \
+              --log-opt ${{ env.LOG_OPT }} \
+              ${{ secrets.DOCKER_USERNAME }}/${{ env.SERVICE_NAME }}:latest
           fi
