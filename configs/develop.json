@@ -1,7 +1,7 @@
 {
   "service": {
     "name": "hello-world-nginx",
-    "published_port": 8081,
+    "published_port": 8082,
     "target_port": 80,
     "replicas": 1,
     "cpu_limit": "0.5",
