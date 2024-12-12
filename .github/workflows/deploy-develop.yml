@@ -10,13 +10,6 @@ jobs:
     environment: develop
     runs-on: ubuntu-latest
     steps:
-    - name: Echo GitHub Secrets
-      run: |
-        echo "DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}"
-        echo "DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}"
-        echo "SSH_HOST: ${{ secrets.SSH_HOST }}"
-        echo "SSH_USERNAME: ${{ secrets.SSH_USERNAME }}"
-        echo "SSH_KEY: ${{ secrets.SSH_KEY }}"
     - name: Checkout code
       uses: actions/checkout@v3
 
